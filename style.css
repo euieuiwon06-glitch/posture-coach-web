@@ -89,6 +89,12 @@ html, body {
   min-height: 100%;
 }
 
+/* PC에서는 75% 배율로 표시 (vh 높이는 배율만큼 나눠 화면을 꽉 채움) */
+@media (min-width: 520px) {
+  html { zoom: 0.75; }
+  html .page { min-height: calc(100vh / 0.75); }
+}
+
 body {
   font-family: var(--font-family);
   background: var(--color-canvas-soft);
